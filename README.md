@@ -4,7 +4,32 @@
 <p>Serverless and PWAs have grown in popularity over the last few years, and they’re both considered to be the future of web development. By combining these two concepts, this app will not only work as a normal web application, but it will also reap the benefits of both serverless architecture and PWAs.</p>
 <p>For this app, I’ll be using a TDD approach, where I write tests before writing the actual functionality for the app in code. Writing tests forces the developer to focus on the requirements of their application before jumping into the code. TDD relies on the repetition of a very short development cycle, allowing the developer to get immediate feedback and deliver high-quality code.</p>
 <p>I'll also add two graphs to this app, which will make it more visually appealing and allow the users to more easily draw conclusions from the data.</p>
+
 <br>
+
+<h1>FEATURE 1: FILTER EVENTS BY CITY</h1>
+<p>As a user I should be able to “filter events by city” so that I can see the list of events that take place in that city</p>
+<h3>Scenario 1: When user hasn’t searched for a city, show upcoming events from all cities.</h3>
+<ul>
+<li>Given: the user hasn't searched for a city</li>
+<li>When: the user opens the main page</li>
+<li>Then: show upcoming events from all cities</li>
+</ul>
+<h3>Scenario 2: User should see a list of suggestions when they search for a city.</h3>
+<ul>
+<li>Given: the user opened the main page</li>
+<li>When: the user search for a city</li>
+<li>Then: the user sees a list of suggested cities</li>
+</ul>
+<h3>Scenario 3: User can select a city from the suggested list.</h3>
+<ul>
+<li>Given: the user searched for a city</li>
+<li>When: the user sees the suggestions</li>
+<li>Then: the user can select one of the suggested cities</li>
+</ul>
+
+<br>
+
 <h2>FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS</h2>
 <p>User story: As a user I should be able to expand and collapse an event element so that I can see and hide event details.</p>
 <h3>Scenario 1: An event element is collapsed by default</h3>
@@ -28,6 +53,8 @@
 <li>Then: the event details should be no longer visible</li>
 </ul>
 
+<br> 
+
 <h2>FEATURE 3: SPECIFY NUMBER OF EVENTS</h2>
 <p>User story: As a user I should be able to see 32 events by default, but also be able to change the number of events I want to see, so that I can see the desired number of events.</p>
 
@@ -45,6 +72,8 @@
 <li>Then: the user should see the specified number of events</li>
 </ul>
   
+<br> 
+
 <h2>FEATURE 4: USE THE APP WHEN OFFLINE</h2>
 <p>User story: As a user I should be able to see the website when I have no internet connection, so that I can still access information about events I loaded earlier when I was online.</p>
   
@@ -61,6 +90,8 @@
 <li>When: the user changes any of the settings</li>
 <li>Then: an error message shows up</li>
 </ul>
+
+<br> 
 
 <h2>FEATURE 5: DATA VISUALIZATION</h2>
 <p>User story: As a user I should be able to  see a chart with the number of upcoming events in each city, so that I can easily understand which city is the busiest. 
