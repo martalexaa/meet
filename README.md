@@ -1,10 +1,14 @@
 # meet
-FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS
-User story: As a user I should be able to expand and collapse an event element so that I can see and hide event details.
-Scenario 1: An event element is collapsed by default
-Given: the user didn’t expand an event to see its details
-When: the user opens the main page
-Then: the event element should be collapsed
+<h1>Meet App</h1>
+<br>
+<h2>FEATURE 2: SHOW/HIDE AN EVENT'S DETAILS</h2>
+<p>User story: As a user I should be able to expand and collapse an event element so that I can see and hide event details.</p>
+<h3>Scenario 1: An event element is collapsed by default</h3>
+<ul>
+<li>Given: the user didn’t expand an event to see its details</li>
+<li>When: the user opens the main page</li>
+<li>Then: the event element should be collapsed</li>
+</ul>
 Scenario 2: User can expand an event to see its details
 Given: the user opened the main page
 When: the user expands an event to see its details
