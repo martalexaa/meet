@@ -1,8 +1,9 @@
 <h1>Meet App</h1>
 <br>
-<p>A serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events. This Meet App will allow users to search for a city and get a list of events hosted in that city.</p>
-<p><strong>Serverless</strong> and <strong>PWAs</strong> have grown in popularity over the last few years, and they’re both considered to be the future of web development. By combining these two concepts, this app will not only work as a normal web application, but it will also reap the benefits of both serverless architecture and PWAs.</p>
-<p>Serverless technology offers several benefits that make it a good choice for my application:</p>
+<p><strong>A serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events. This Meet App will allow users to search for a city and get a list of events hosted in that city.</strong></p>
+<br>
+<p><strong>Serverless</strong> and <strong>PWAs (Progressive Web Apps)</strong> have grown in popularity over the last few years, and they’re both considered to be the future of web development. By combining these two concepts, this app will not only work as a normal web application, but it will also reap the benefits of both serverless architecture and PWAs.</p>
+<p>Serverless technology (such as AWS Lambda) offers several benefits that make it a good choice for my application:</p>
 <ul>
 <li>Reduced management overhead: With serverless computing, developers don't have to worry about managing servers or infrastructure. This means that they can focus on writing code and building features instead of worrying about the underlying infrastructure.</li>
 <li>Scalability: Serverless technology allows applications to easily scale based on demand. This means that an application can handle a sudden influx of traffic without having to worry about provisioning additional servers or managing load balancers.</li>
