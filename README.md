@@ -1,8 +1,17 @@
 <h1>Meet App</h1>
 <br>
-<p>A serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events. This Meet App will allow users to search for a city and get a list of events hosted in that city.</p>
-<p>Serverless and PWAs have grown in popularity over the last few years, and they’re both considered to be the future of web development. By combining these two concepts, this app will not only work as a normal web application, but it will also reap the benefits of both serverless architecture and PWAs.</p>
-<p>For this app, I’ll be using a TDD approach, where I write tests before writing the actual functionality for the app in code. Writing tests forces the developer to focus on the requirements of their application before jumping into the code. TDD relies on the repetition of a very short development cycle, allowing the developer to get immediate feedback and deliver high-quality code.</p>
+<p><strong>A serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events. This Meet App will allow users to search for a city and get a list of events hosted in that city.</strong></p>
+<br>
+<p><strong>Serverless</strong> and <strong>PWAs (Progressive Web Apps)</strong> have grown in popularity over the last few years, and they’re both considered to be the future of web development. By combining these two concepts, this app will not only work as a normal web application, but it will also reap the benefits of both serverless architecture and PWAs.</p>
+<p>Serverless technology (such as AWS Lambda) offers several benefits that make it a good choice for my application:</p>
+<ul>
+<li>Reduced management overhead: With serverless computing, developers don't have to worry about managing servers or infrastructure. This means that they can focus on writing code and building features instead of worrying about the underlying infrastructure.</li>
+<li>Scalability: Serverless technology allows applications to easily scale based on demand. This means that an application can handle a sudden influx of traffic without having to worry about provisioning additional servers or managing load balancers.</li>
+<li>Cost-effective: Serverless computing allows organizations to pay only for the computing resources they actually use. This means that they can reduce their infrastructure costs and optimize their spending based on their actual usage.</li>
+<li>Faster development and deployment: With serverless computing, developers can write and deploy code more quickly. This is because they don't have to worry about the underlying infrastructure, and they can easily integrate with other cloud services.</li>
+<li>Improved reliability: Serverless technology is designed to be fault-tolerant and resilient. This means that applications can be more reliable and have higher availability, as the cloud provider handles many aspects of the underlying infrastructure.</li>
+</ul>
+<p>For this app, I’ll be using a <strong>TDD (Test-driven development)</strong> approach, where I write tests before writing the actual functionality for the app in code. Writing tests forces the developer to focus on the requirements of their application before jumping into the code. TDD relies on the repetition of a very short development cycle, allowing the developer to get immediate feedback and deliver high-quality code.</p>
 <p>I'll also add two graphs to this app, which will make it more visually appealing and allow the users to more easily draw conclusions from the data.</p>
 
 <br>
