@@ -20,7 +20,7 @@ class Event extends Component {
     const { event } = this.props
     const { isCollapsed } = this.state
 
-    return <div className='Event'>
+    return <div className='event'>
       <h4 className='name'>{event.summary}</h4>
       <p className='location'>{event.location}</p>
       <p className='event-start'>
