@@ -32,8 +32,8 @@ export const getEvents = async () => {
     NProgress.start();
     //check if the current URL of the web page starts with a specified string
     if (window.location.href.startsWith('http://localhost')) {
-        return mockData;
         NProgress.done();
+        return mockData;
     }
 
     const token = await getAccessToken();
