@@ -31,13 +31,16 @@ class CitySearch extends Component {
     render() {
         return (
             <div className="CitySearch">
-                <input
-                    type="text"
-                    className="city"
-                    value={this.state.query}
-                    onChange={this.handleInputChanged}
-                    onFocus={() => { this.setState({ showSuggestions: true }) }}
-                />
+                <div>
+                    <label for="city-input"><strong>Choose city: </strong></label>
+                    <input
+                        type="text"
+                        id="city-input"
+                        value={this.state.query}
+                        onChange={this.handleInputChanged}
+                        onFocus={() => { this.setState({ showSuggestions: true }) }}
+                    />
+                </div>
                 <ul className="suggestions" style={this.state.showSuggestions ? {} : { display: 'none' }}>
                     {this.state.suggestions.map((suggestion) => (
                         <li

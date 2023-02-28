@@ -4,6 +4,7 @@
   padding: 2% 5%;
 }
 
+
 .App * {
   box-sizing: border-box;
 }
@@ -26,7 +27,9 @@ p {
 
 input[type="text"],
 input[type="number"] {
-  padding: 8px 6px 8px 10px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
   border-radius: 4px;
   outline: none;
   border: 1px solid #ccc;
@@ -36,26 +39,57 @@ input[type="number"] {
   height: 38px;
 }
 
-.city {
-  width: 250px;
+input[type=text]:focus,
+input[type="number"]:focus {
+  border: 3px solid #555;
 }
 
-.CitySearch {
+.filter-box {
+  margin: auto;
+  width: 100%;
+  border: 3px solid #555;
+  padding: 10px;
+  text-align: left;
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+
+.CitySearch, .NumberOfEvents {
   display: flex;
   flex-direction: column;
   flex-basis: 300px;
   max-width: 300px;
   margin: auto;
   position: relative;
+  border-radius: 4px;
 }
 
+
+.Event {
+  padding: 10px 10px 35px;
+  margin-bottom: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  background-color: #ccc;
+  border: 3px solid #555;
+}
+
+.Event:hover, .filter-box:hover {
+  opacity: 0.8;
+}
+
+
+
 .suggestions {
-  width: 250px;
+  width: 220px;
   position: absolute;
   z-index: 2;
-  align-self: center;
+  border-radius: 4px;
   margin: 0;
-  top: 43px;
+  top: 65px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -76,29 +110,20 @@ input[type="number"] {
   background-color: #bcdcdb;
 }
 
-.event {
-  padding: 10px 10px 35px;
-  margin-bottom: 10px;
-  text-align: left;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  position: relative;
-}
+
 
 .details-btn {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
-  padding: 5px 8px;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px 12px;
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  background: #ffffff;
+  font-weight: bold;
 }
 
-.name {
-  font-size: 18px;
-  font-weight: 600;
-}
 
 .group-name {
   text-transform: uppercase;
@@ -114,11 +139,6 @@ input[type="number"] {
   overflow-x: hidden;
 }
 
-.numberOfEvents {
-  width: 200px;
-  margin: 20px auto;
-  text-align: center;
-}
 
 .button-wrapper {
   display: grid;

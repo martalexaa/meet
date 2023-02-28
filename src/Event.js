@@ -20,13 +20,13 @@ class Event extends Component {
     const { event } = this.props
     const { isCollapsed } = this.state
 
-    return <div className='event'>
-      <h4 className='name'>{event.summary}</h4>
+    return <div className='Event'>
+      <h3 className='name'>{event.summary}</h3>
       <p className='location'>{event.location}</p>
       <p className='event-start'>
         {new Date(event.start.dateTime).toString()}
       </p>
-      <button className="details" onClick={this.handleClick}>{this.state.isCollapsed ? 'Show ' : 'Hide '}
+      <button className="details-btn" onClick={this.handleClick}>{this.state.isCollapsed ? 'Show ' : 'Hide '}
         Details
       </button>
       {!isCollapsed &&
