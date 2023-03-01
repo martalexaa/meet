@@ -32,10 +32,11 @@ class CitySearch extends Component {
         return (
             <div className="CitySearch">
                 <div>
-                    <label for="city-input"><strong>Choose city: </strong></label>
+                    <label htmlFor="city-input"><strong>Choose city: </strong></label>
                     <input
                         type="text"
                         id="city-input"
+                        className="city"
                         value={this.state.query}
                         onChange={this.handleInputChanged}
                         onFocus={() => { this.setState({ showSuggestions: true }) }}

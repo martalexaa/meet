@@ -17,7 +17,7 @@ class NumberOfEvents extends Component {
         return (
             <div className="NumberOfEvents">
                 <div>
-                    <label for="number-of-events"><strong>Number of events: </strong></label>
+                    <label htmlFor="number-of-events"><strong>Number of events: </strong></label>
                     <input
                         id="number-of-events"
                         type="number"
