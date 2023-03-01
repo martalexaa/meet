@@ -20,26 +20,33 @@ class Event extends Component {
     const { event } = this.props
     const { isCollapsed } = this.state
 
-    return <div className='Event'>
-      <h3 className='name'>{event.summary}</h3>
-      <p className='location'>{event.location}</p>
-      <p className='event-start'>
-        {new Date(event.start.dateTime).toString()}
-      </p>
-      <button className="details-btn" onClick={this.handleClick}>{this.state.isCollapsed ? 'Show ' : 'Hide '}
-        Details
-      </button>
-      {!isCollapsed &&
-        <div className='toggle'>
-          <p className='link'>{event.htmlLink}</p>
-          <p className='status'>{event.status}</p>
-          <p className='description'>{event.description}</p>
-          <p className='creator'>{event.creator}</p>
-          <p className='organizer'>{event.organizer}</p>
-          <p className='recurrence'>{event.recurrence}</p>
-        </div>
-      }
-    </div>;
+    return (
+      <div className='Event'>
+        <h3 className='name'>{event.summary}</h3>
+        <p className='location'>{event.location}</p>
+        <p className='event-start'>
+          {new Date(event.start.dateTime).toString()}
+        </p>
+        <button className="details-btn" onClick={this.handleClick}>{this.state.isCollapsed ? 'Show ' : 'Hide '}
+          Details
+        </button>
+        {!isCollapsed && (
+          <div className='details'>
+            <p className="description">
+              <strong>Description:</strong> {event.description}
+            </p>
+            <a
+              className="link"
+              href={event.htmlLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn more
+            </a>
+          </div>
+        )}
+      </div>
+    );
   }
 }
 export default Event;
