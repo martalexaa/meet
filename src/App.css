@@ -89,7 +89,7 @@ input[type="number"]:focus {
   z-index: 2;
   border-radius: 4px;
   margin: 0;
-  top: 65px;
+  top: 70px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
