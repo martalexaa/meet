@@ -48,7 +48,8 @@ input[type="number"]:focus {
   margin: auto;
   width: 100%;
   border: 3px solid #555;
-  padding: 10px;
+  padding-bottom: 15px;
+  padding-top: 25px;
   text-align: left;
   background-color: #ccc;
   border-radius: 4px;
@@ -77,10 +78,6 @@ input[type="number"]:focus {
   border: 3px solid #555;
 }
 
-.Event:hover, .filter-box:hover {
-  opacity: 0.8;
-}
-
 
 
 .suggestions {
@@ -89,7 +86,7 @@ input[type="number"]:focus {
   z-index: 1;
   border-radius: 4px;
   margin: 0;
-  top: 70px;
+  top: 68px;
   font-size: 14px;
   box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
@@ -98,7 +95,6 @@ input[type="number"]:focus {
   text-align: left;
   padding: 8px 6px 8px 10px;
   background-color: #eee;
-  cursor: default;
 }
 
 .suggestions > li:last-child {
@@ -150,7 +146,7 @@ input[type="number"]:focus {
 
 .Alert {
   position: fixed;
-  top: 20px;
+  top: 195px;
 }
 
 .data-vis-wrapper {

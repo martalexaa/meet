@@ -43,7 +43,7 @@ class CitySearch extends Component {
         return (
             <div className="CitySearch">
                 <div>
-                    <label htmlFor="city-input"><strong>Choose city: </strong></label>
+                    <label htmlFor="city-input"><strong>Choose a city: </strong></label>
                     <input
                         type="text"
                         id="city-input"
