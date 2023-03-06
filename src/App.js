@@ -3,6 +3,7 @@ import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import { WarningAlert } from './Alert';
 import { getEvents, extractLocations } from './api';
 import './nprogress.css';
 
@@ -12,8 +13,9 @@ class App extends Component {
     events: [],
     locations: [],
     seletedLocation: 'all',
-    eventCount: 32
+    eventCount: 32,
   }
+
 
 
   //load events when the app loads - update the state only if this.mounted is true
@@ -68,12 +70,17 @@ class App extends Component {
   };
 
   render() {
+    const offlineMessage = navigator.onLine
+      ? ''
+      : 'The app has no connection to the internet. The information displayed may not be up-to-date.';
+
     return (
       <div className="App">
         <div className="filter-box">
           <h1>Meet App</h1>
           <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
           <NumberOfEvents updateEvents={this.updateEvents} />
+          <WarningAlert text={offlineMessage}></WarningAlert>
         </div>
         <EventList events={this.state.events} />
       </div>
