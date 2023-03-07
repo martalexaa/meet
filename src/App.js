@@ -15,7 +15,8 @@ class App extends Component {
     locations: [],
     seletedLocation: 'all',
     eventCount: 32,
-    showWelcomeScreen: undefined
+    showWelcomeScreen: false,
+    // showWelcomeScreen: false, // For local testing
   }
 
 
@@ -23,11 +24,21 @@ class App extends Component {
   //load events when the app loads - update the state only if this.mounted is true
   async componentDidMount() {
     this.mounted = true;
+
+    // Use this code for local testing
+    getEvents().then((events) => {
+      if (this.mounted) {
+        this.setState({ events, locations: extractLocations(events) });
+      }
+    });
+
+    //UNCOMMENT THESE LINES FOR LOCAL TESTING
     const accessToken = localStorage.getItem('access_token');
     const isTokenValid = (await checkToken(accessToken)).error ?
       false : true;
     const searchParams = new URLSearchParams(window.location.search);
     const code = searchParams.get("code");
+
     this.setState({ showWelcomeScreen: !(code || isTokenValid) });
     if ((code || isTokenValid) && this.mounted) {
       getEvents().then((events) => {
@@ -36,6 +47,7 @@ class App extends Component {
         }
       });
     }
+    //UNCOMMENT END
   }
 
   componentWillUnmount() {
