@@ -93,7 +93,7 @@ class App extends Component {
           <h1>Meet App</h1>
           <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
           <NumberOfEvents updateEvents={this.updateEvents} />
-          <WarningAlert text={offlineMessage}></WarningAlert>
+          <WarningAlert className="alert" text={offlineMessage}></WarningAlert>
         </div>
         <EventList events={this.state.events} />
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}

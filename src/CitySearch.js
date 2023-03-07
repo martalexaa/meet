@@ -64,7 +64,7 @@ class CitySearch extends Component {
                         <h4>See all cities</h4>
                     </li>
                 </ul>
-                <InfoAlert text={this.state.infoText} />
+                <InfoAlert className="alert" text={this.state.infoText} />
             </div>
         );
     }
