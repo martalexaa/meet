@@ -15,7 +15,7 @@ class App extends Component {
     locations: [],
     seletedLocation: 'all',
     eventCount: 32,
-    showWelcomeScreen: false,
+    showWelcomeScreen: undefined,
     // showWelcomeScreen: false, // For local testing
   }
 
@@ -32,7 +32,7 @@ class App extends Component {
       }
     });
 
-    //UNCOMMENT THESE LINES FOR LOCAL TESTING
+    //UNCOMMENT THESE LINES WHIL TESTING LOCALLY
     const accessToken = localStorage.getItem('access_token');
     const isTokenValid = (await checkToken(accessToken)).error ?
       false : true;
