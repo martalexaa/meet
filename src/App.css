@@ -150,7 +150,7 @@ input[type="number"]:focus {
 
 .Alert {
   position: fixed;
-  top: 195px;
+  top: 250px;
 }
 
 .data-vis-wrapper {
