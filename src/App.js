@@ -7,6 +7,7 @@ import { WarningAlert } from './Alert';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 import './nprogress.css';
 import WelcomeScreen from './WelcomeScreen';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 class App extends Component {
 
@@ -107,6 +108,22 @@ class App extends Component {
           <NumberOfEvents updateEvents={this.updateEvents} />
           <WarningAlert text={offlineMessage}></WarningAlert>
         </div>
+        <h2>Events in each city</h2>
+        <ResponsiveContainer height={400} >
+          <ScatterChart
+            width={800}
+            height={400}
+            margin={{
+              top: 20, right: 20, bottom: 20, left: 20,
+            }}
+          >
+            <CartesianGrid />
+            <XAxis type="category" dataKey="city" name="city" />
+            <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
+            <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+            <Scatter data={this.getData()} fill="#f8738b" />
+          </ScatterChart>
+        </ResponsiveContainer>
         <EventList events={this.state.events} />
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => { getAccessToken() }} />
