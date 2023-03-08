@@ -52,7 +52,7 @@
             color: #f8738b;
         }
 
-        h4 {
+        .welcome-title {
             text-shadow:#000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
             #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
         }
