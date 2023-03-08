@@ -3,6 +3,7 @@ import './App.css';
 import EventList from './EventList';
 import CitySearch from './CitySearch';
 import NumberOfEvents from './NumberOfEvents';
+import EventGenre from './EventGenre';
 import { WarningAlert } from './Alert';
 import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 import './nprogress.css';
@@ -103,27 +104,30 @@ class App extends Component {
     return (
       <div className="App">
         <div className="filter-box">
-          <h1>Meet App</h1>
+          <h1>Let's Meet Up</h1>
           <CitySearch locations={this.state.locations} updateEvents={this.updateEvents} />
           <NumberOfEvents updateEvents={this.updateEvents} />
           <WarningAlert text={offlineMessage}></WarningAlert>
         </div>
         <h2>Events in each city</h2>
-        <ResponsiveContainer height={400} >
-          <ScatterChart
-            width={800}
-            height={400}
-            margin={{
-              top: 20, right: 20, bottom: 20, left: 20,
-            }}
-          >
-            <CartesianGrid />
-            <XAxis type="category" dataKey="city" name="city" />
-            <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
-            <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-            <Scatter data={this.getData()} fill="#f8738b" />
-          </ScatterChart>
-        </ResponsiveContainer>
+        <div className='data-vis-wrapper'>
+          <EventGenre events={this.state.events} />
+          <ResponsiveContainer height={400} >
+            <ScatterChart
+              width={800}
+              height={400}
+              margin={{
+                top: 20, right: 20, bottom: 20, left: 20,
+              }}
+            >
+              <CartesianGrid />
+              <XAxis type="category" dataKey="city" name="city" color="#ffff" />
+              <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+              <Scatter data={this.getData()} fill="#f8738b" />
+            </ScatterChart>
+          </ResponsiveContainer>
+        </div>
         <EventList events={this.state.events} />
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => { getAccessToken() }} />
