@@ -15,7 +15,7 @@ class App extends Component {
   state = {
     events: [],
     locations: [],
-    seletedLocation: 'all',
+    selectedLocation: 'all',
     eventCount: 32,
     showWelcomeScreen: undefined,
     // showWelcomeScreen: false, // For local testing
@@ -57,7 +57,7 @@ class App extends Component {
   }
 
   updateEvents = (location, inputNumber) => {
-    const { eventCount, seletedLocation } = this.state;
+    const { eventCount, selectedLocation } = this.state;
     if (location) {
       getEvents().then((events) => {
         const locationEvents = (location === 'all') ?
@@ -66,14 +66,14 @@ class App extends Component {
         const eventsToShow = locationEvents.slice(0, eventCount);
         this.setState({
           events: eventsToShow,
-          seletedLocation: location
+          selectedLocation: location
         });
       });
     } else {
       getEvents().then((events) => {
-        const locationEvents = (seletedLocation === 'all') ?
+        const locationEvents = (selectedLocation === 'all') ?
           events :
-          events.filter((event) => event.location === seletedLocation);
+          events.filter((event) => event.location === selectedLocation);
         const eventsToShow = locationEvents.slice(0, inputNumber);
         this.setState({
           events: eventsToShow,
@@ -114,10 +114,9 @@ class App extends Component {
           <EventGenre events={this.state.events} />
           <ResponsiveContainer height={400} >
             <ScatterChart
-              width={800}
               height={400}
               margin={{
-                top: 20, right: 20, bottom: 20, left: 20,
+                top: 20, right: 0, bottom: 20, left: 0,
               }}
             >
               <CartesianGrid />
