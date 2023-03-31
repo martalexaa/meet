@@ -18,7 +18,6 @@ class App extends Component {
     selectedLocation: 'all',
     eventCount: 32,
     showWelcomeScreen: undefined,
-    // showWelcomeScreen: false, // For local testing
   }
 
 
@@ -34,7 +33,6 @@ class App extends Component {
       }
     });
 
-    //UNCOMMENT THESE LINES WHIL TESTING LOCALLY
     const accessToken = localStorage.getItem('access_token');
     const isTokenValid = (await checkToken(accessToken)).error ?
       false : true;
@@ -49,7 +47,6 @@ class App extends Component {
         }
       });
     }
-    //UNCOMMENT END
   }
 
   componentWillUnmount() {
@@ -127,7 +124,11 @@ class App extends Component {
             </ScatterChart>
           </ResponsiveContainer>
         </div>
-        <EventList events={this.state.events} />
+        {this.state.events && this.state.events.length > 0 ?
+          <EventList events={this.state.events} />
+          :
+          <p>No events found</p>
+        }
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}
           getAccessToken={() => { getAccessToken() }} />
       </div>

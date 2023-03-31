@@ -1,4 +1,5 @@
 .WelcomeScreen {
+     /* visibility: hidden; -- when testing locally */ 
     position: fixed;
     width: 100%;
     height: 100%;
